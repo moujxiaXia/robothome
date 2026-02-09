@@ -1,0 +1,200 @@
+/* Bootstrap 风格主题 - 在 Bootstrap 5 基础上适配本站结构 */
+/* 需先引入 Bootstrap 5 CSS */
+body {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+body::before {
+    display: none;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    color: #0d6efd;
+    font-size: 1.25rem;
+}
+
+.logo:hover {
+    color: #0a58ca;
+}
+
+.logo-icon {
+    color: #0dcaf0;
+    filter: none;
+}
+
+.nav-link {
+    color: #6c757d;
+    border-radius: 0.375rem;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+    background: #e7f1ff;
+}
+
+.nav-link.active {
+    color: #0d6efd;
+    background: #e7f1ff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%) !important;
+    min-height: 45vh;
+}
+
+.hero-bg,
+.hero-bg::after {
+    display: none;
+}
+
+.hero-content {
+    color: #fff;
+}
+
+.hero-title {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+    color: rgba(255,255,255,0.9);
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section:nth-child(even) {
+    background: #fff;
+}
+
+.section-title {
+    color: #212529;
+    border-bottom-color: #0d6efd;
+}
+
+.section-desc {
+    color: #6c757d;
+}
+
+.intro-block {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-left-color: #0d6efd;
+}
+
+.intro-article h2 {
+    color: #0d6efd;
+}
+
+.intro-body {
+    color: #6c757d;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card-link:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.card-cat {
+    color: #0d6efd;
+}
+
+.card-title {
+    color: #212529;
+}
+
+.card-summary,
+.card-date {
+    color: #6c757d;
+}
+
+.article-list-item:hover {
+    background: #f8f9fa;
+}
+
+.list-content strong {
+    color: #212529;
+}
+
+.list-summary,
+.list-content time {
+    color: #6c757d;
+}
+
+.article-cat {
+    color: #0d6efd;
+}
+
+.article-title {
+    color: #212529;
+}
+
+.article-meta {
+    color: #6c757d;
+}
+
+.article-body {
+    color: #212529;
+}
+
+.back-link {
+    color: #0d6efd;
+}
+
+.about-article h2 {
+    color: #0d6efd;
+}
+
+.about-body p {
+    color: #6c757d;
+}
+
+.empty-state {
+    color: #6c757d;
+}
+
+.site-footer {
+    background: #fff;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-brand {
+    color: #0d6efd;
+}
+
+.footer-copy,
+.footer-credit {
+    color: #6c757d;
+}
+
+.footer-credit a {
+    color: #0d6efd;
+}
+
+.nav-toggle {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.nav-toggle::before {
+    background: #495057;
+    box-shadow: 0 6px 0 #495057, 0 12px 0 #495057;
+}

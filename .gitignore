@@ -1,0 +1,17 @@
+# 配置与敏感信息（可复制 database.php 为 database.local.php 并在此忽略）
+config/database.local.php
+.env
+
+# 上传文件保留目录，忽略内容
+uploads/*
+!uploads/.gitkeep
+data/
+
+# 第三方模板（可在此目录下手动 git clone，见 templates/README.md）
+templates/
+
+# 系统与 IDE
+.DS_Store
+.idea
+.vscode
+*.log

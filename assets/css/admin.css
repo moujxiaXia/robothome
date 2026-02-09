@@ -1,0 +1,258 @@
+/* 管理后台样式 */
+.admin-body {
+    min-height: 100vh;
+    background: var(--bg-dark, #0d1117);
+    color: var(--text, #c9d1d9);
+}
+
+.admin-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-card, #161b22);
+    border-bottom: 1px solid var(--border, #30363d);
+}
+
+.admin-nav-brand {
+    font-family: var(--font-display, 'Orbitron', sans-serif);
+    color: var(--accent, #58a6ff);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.admin-nav a:not(.admin-nav-brand) {
+    color: var(--text-muted, #8b949e);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+}
+
+.admin-nav a:hover {
+    color: var(--text);
+    background: var(--bg-elevated, #21262d);
+}
+
+.admin-nav-user {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.admin-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.admin-page-title {
+    font-family: var(--font-display, 'Orbitron', sans-serif);
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-card {
+    background: var(--bg-card, #161b22);
+    border: 1px solid var(--border, #30363d);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    min-width: 140px;
+}
+
+.admin-card-num {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--accent, #58a6ff);
+}
+
+.admin-card-label {
+    font-size: 0.875rem;
+    color: var(--text-muted, #8b949e);
+}
+
+.admin-hint {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.admin-hint a {
+    color: var(--accent);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border, #30363d);
+}
+
+.admin-table th {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.admin-table a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 0.75rem;
+}
+
+.admin-table a:hover {
+    text-decoration: underline;
+}
+
+.admin-table .link-danger {
+    color: var(--danger, #f85149);
+}
+
+.admin-error {
+    color: var(--danger, #f85149);
+    margin-bottom: 1rem;
+}
+
+.admin-msg {
+    color: var(--accent-green, #3fb950);
+    margin-bottom: 1rem;
+}
+
+.theme-form .theme-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-card, #161b22);
+    border: 2px solid var(--border, #30363d);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.theme-option:hover {
+    border-color: var(--accent, #58a6ff);
+}
+
+.theme-option.is-current {
+    border-color: var(--accent-cyan, #39c5cf);
+    background: rgba(57, 197, 207, 0.08);
+}
+
+.theme-option input {
+    margin-right: 0.5rem;
+}
+
+.theme-name {
+    font-weight: 500;
+}
+
+.admin-form {
+    max-width: 640px;
+}
+
+.form-row {
+    margin-bottom: 1.25rem;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: var(--bg-card, #161b22);
+    border: 1px solid var(--border, #30363d);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.5rem 0 0;
+}
+
+.form-hint img {
+    vertical-align: middle;
+    margin-left: 0.25rem;
+}
+
+.form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--border, #30363d);
+    background: var(--bg-elevated, #21262d);
+    color: var(--text);
+    font-family: inherit;
+}
+
+.btn:hover {
+    background: var(--bg-card);
+}
+
+.btn-primary {
+    background: var(--accent-green, #3fb950);
+    border-color: var(--accent-green);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.form-row input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.form-row label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+}

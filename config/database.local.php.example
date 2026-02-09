@@ -1,0 +1,8 @@
+<?php
+// 复制为 database.local.php 并按本地环境修改（常见本地：root / 空密码）
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'robothome');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_CHARSET', 'utf8mb4');
+define('BASE_PATH', '');
