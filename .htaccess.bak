@@ -1,4 +1,4 @@
-# 机器人之家 - Apache 配置（修正版）
+# 机器人之家 - Apache 配置
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -9,9 +9,6 @@
     RewriteRule \.sql$ - [F,L]
     RewriteRule ^\.htaccess$ - [F,L]
 
-    # 上传目录禁止执行 PHP（改用Rewrite实现，替代原<Directory>指令）
-    RewriteRule ^uploads/.*\.php$ - [F,L]
-
     # 若请求的是真实存在的文件或目录，直接返回
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -21,6 +18,13 @@
 
 # 安全：禁止目录列表
 Options -Indexes
+
+# 上传目录禁止执行 PHP
+<Directory "uploads">
+    <FilesMatch "\.php$">
+        Require all denied
+    </FilesMatch>
+</Directory>
 
 # 字符集
 AddDefaultCharset UTF-8
