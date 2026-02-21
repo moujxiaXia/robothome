@@ -23,7 +23,10 @@ function getArticles(PDO $pdo, ?int $categoryId = null, int $limit = 50, int $of
     $sel = 'a.*, c.slug AS category_slug, c.name AS category_name';
     if ($categoryId !== null) {
         $stmt = $pdo->prepare("SELECT $sel FROM articles a JOIN categories c ON a.category_id = c.id WHERE a.category_id = ? AND a.is_published = 1 ORDER BY a.created_at DESC LIMIT ? OFFSET ?");
-        $stmt->execute([$categoryId, $limit, $offset]);
+        $stmt->bindValue(1, $categoryId, PDO::PARAM_INT);
+        $stmt->bindValue(2, $limit, PDO::PARAM_INT);
+        $stmt->bindValue(3, $offset, PDO::PARAM_INT);
+        $stmt->execute();
     } else {
         $stmt = $pdo->query("SELECT $sel FROM articles a JOIN categories c ON a.category_id = c.id WHERE a.is_published = 1 ORDER BY a.created_at DESC LIMIT $limit OFFSET $offset");
     }

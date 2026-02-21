@@ -23,7 +23,13 @@ if ($page === 'article') {
             exit;
         }
     }
-    $page = 'home';
+    // 文章不存在，显示 404
+    http_response_code(404);
+    $pageTitle = '页面未找到';
+    require __DIR__ . '/includes/header.php';
+    require __DIR__ . '/pages/404.php';
+    require __DIR__ . '/includes/footer.php';
+    exit;
 }
 
 $pageTitle = null;
@@ -32,6 +38,17 @@ if ($category) {
     $pageTitle = $category['name'];
 }
 
+// 检查页面文件是否存在
+$pageFile = __DIR__ . '/pages/' . $page . '.php';
+if (!file_exists($pageFile)) {
+    http_response_code(404);
+    $pageTitle = '页面未找到';
+    require __DIR__ . '/includes/header.php';
+    require __DIR__ . '/pages/404.php';
+    require __DIR__ . '/includes/footer.php';
+    exit;
+}
+
 require __DIR__ . '/includes/header.php';
-require __DIR__ . '/pages/' . $page . '.php';
+require $pageFile;
 require __DIR__ . '/includes/footer.php';
